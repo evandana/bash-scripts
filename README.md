@@ -1,3 +1,9 @@
+# shortcuts
+
+https://github.com/fliptheweb/bash-shortcuts-cheat-sheet
+
+Note: follow the tesps to set "Option as Meta key"
+
 # bash-scripts
 
 *Search all matching folder names for files that match a pattern and output the results into a file*
