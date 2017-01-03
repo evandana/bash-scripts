@@ -2,7 +2,8 @@
 
  * https://github.com/fliptheweb/bash-shortcuts-cheat-sheet
    
-   Note: Follow the steps to set "Option as Meta key"
+   * E.G. clear line, jump to start of line, make the rest of the word capitalized, ...
+   * Note: Follow the steps to set "Option as Meta key"
 
 # Bash Scripts
 
