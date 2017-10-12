@@ -39,4 +39,15 @@ evandana@C02SGFDTG8WP:AN-alarm-data-simulator$ git log master -n 1 --pretty=form
 84e79d57c5c6d3131d9ae362a1e877380f35f7d1
 ```
 
+### Remove Local Branches That No Longer Have Remotes
 
+```bash
+# list all branches
+git branch -a
+
+# list branches (search for `gone` for those without remotes)
+git branch -vv
+
+# remove all branches with `gone`
+git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
+```
