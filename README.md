@@ -13,6 +13,7 @@
 - [Bash Scripts](bash-scripts.md)
 - [Bash Profile](bash-profile.md)
 - [Local Server](local-server.md)
+- [Turn On/Off Proxies](turn-on-off-proxies.md)
 
 
 ## VCS
