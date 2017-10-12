@@ -12,6 +12,7 @@
 
 - [Bash Scripts](bash-scripts.md)
 - [Bash Profile](bash-profile.md)
+- [Local Server](local-server.md)
 
 
 ## VCS
