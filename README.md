@@ -24,3 +24,8 @@
 ## Client Side
 
 - [NPM](npm.md)
+
+## Testing
+
+- [Cross-Browser Testing in a VM](cross-browser-testing.md)
+- [Cross-Browser Testing with SauceLabs](sauce-labs.md)
