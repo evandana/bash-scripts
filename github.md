@@ -1,6 +1,15 @@
 # Github Code Snippets
 
 
+## Fixing Mistakes
+
+### Remove Local Commits
+
+```bash
+git branch -D <<branch>>
+git checkout origin/<<branch>> -b <<branch>>
+```
+
 ## Get Information
 
 
