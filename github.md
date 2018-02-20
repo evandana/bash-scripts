@@ -1,6 +1,15 @@
 # Github Code Snippets
 
 
+## Local `.gitignore`
+
+Update a local .gitignore file. Edits to this file will not be tracked, and therefore not create additional commits.
+
+Path: `.git/info/exclude`
+
+Edit file with Nano: `nano .git/info/exclude`
+
+
 ## Fixing Mistakes
 
 ### Remove Local Commits
