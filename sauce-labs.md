@@ -47,7 +47,7 @@ Note:
 - _username_ is NOT the email address
 - _tunnel-name_ should have no spaces and should be kebab-case
 
-`bin/sc -u username -k 758f7c99-8651-.. -i tunnel-name`
+`bin/sc -u username -k 758f7c99-8651-.. -i tunnel-name-in-kebab-case`
 
 
 ## Run the Tests
@@ -75,7 +75,7 @@ Read the instructions on [Cross Browser Testing](cross-browser-testing.md)
       "username": "REPLACE_WITH_USERNAME",
       "accessKey": "758f7c99-8651-...",
       "name": "new-test",
-      "tunnelId": "Unnamed tunnel",
+      "tunnelId": "tunnel-name-in-kebab-case",
       "disabled": false,
       "browsers": [
         {
