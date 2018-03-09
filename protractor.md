@@ -21,7 +21,7 @@ node --inspect-brk PATH_TO_NPM_PROTRACTOR PATH_TO_PROTRACTOR_CONFIG_FILE
 e.g. 
 
 ```bash
-node --inspect-brk  /usr/local/lib/node_modules/protractor/bin/protractor test-modules/mimic/conf/protractor.cucumber.common.conf.js
+node --inspect-brk  /usr/local/lib/node_modules/protractor/bin/protractor test-modules/module-name/conf/protractor.cucumber.common.conf.js
 ```
 
 3. **Open the DevTools**
