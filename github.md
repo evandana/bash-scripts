@@ -69,3 +69,33 @@ git branch -vv
 # remove all branches with `gone`
 git fetch -p && for branch in `git branch -vv | grep ': gone]' | awk '{print $1}'`; do git branch -D $branch; done
 ```
+
+## Setup Files
+
+### ~/.gitconfig
+
+```bash
+[user]
+	name = <<ADD GITHUB FIRST AND LAST NAME>>
+	email = <<ADD GITHUB EMAIL>>
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple  
+[core]
+	excludesfile = /Users/<<USERNAME>>/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[http]
+	sslVerify = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[url "https://github.com/"]
+	insteadOf = git@github.com:
+[url "https://"]
+	insteadOf = git://
+```
