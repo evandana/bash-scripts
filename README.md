@@ -2,32 +2,24 @@
 
 **Please follow the [Contribution Guidelines](contribution-guidelines.md)**
 
+## Scripts
 
-## Quick Keys
+- [Replace](scripts/replace.sh)
 
-- [Quick Keys](quick-keys)
-
-
-## Mac
-
-- [Bash Scripts](bash-scripts.md)
-- [Bash Profile](bash-profile.md)
-- [Local Server](local-server.md)
-- [Turn On/Off Proxies](turn-on-off-proxies.md)
-
-
-## VCS
+## General
 
 - [GitHub](github.md)
-
-
-## Client Side
-
-- [NPM](npm.md)
-
-## Testing
-
-- [Cross-Browser Testing in a VM](cross-browser-testing.md)
-- [Cross-Browser Testing with SauceLabs](sauce-labs.md)
+- [Local Server](local-server.md)
+- [Bash](bash.md)
+- [Bash Profile](mac-bash-profile.md)
+- [SauceLabs Setup](sauce-labs.md)
+- [Cross-Browser Testing](cross-browser-testing.md)
 - [Protractor](protractor.md)
+- [Docker](docker.md)
 - [WCT](wct.md)
+- [SCP in VSCode](scp-vscode.md)
+- [Turn On/Off Proxies](turn-on-off-proxies.md)
+
+## IQP
+
+- [IQP Setup](iqp/index.md)

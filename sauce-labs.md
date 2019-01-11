@@ -18,23 +18,6 @@
 ## Install SauceConnect
 
 1. Download [SauceConnect](https://wiki.saucelabs.com/display/DOCS/Sauce+Connect+Proxy)
-1. Extract that folder to reveal its contents
-    ```bash
-    ./sc-4.4.9-osx/.DS_Store
-    ./sc-4.4.9-osx/bin/sc
-    ./sc-4.4.9-osx/config_examples/.DS_Store
-    ./sc-4.4.9-osx/config_examples/systemd/README.md
-    ./sc-4.4.9-osx/config_examples/systemd/sc.service
-    ./sc-4.4.9-osx/config_examples/systemd/sc@.service
-    ./sc-4.4.9-osx/config_examples/upstart/README.md
-    ./sc-4.4.9-osx/config_examples/upstart/sc.conf
-    ./sc-4.4.9-osx/config_examples/upstart/sc_worker.conf
-    ./sc-4.4.9-osx/COPYRIGHT.md
-    ./sc-4.4.9-osx/license.html
-    ```
-1. Copy the bin to your local bin: `sudo cp ./sc-4.4.9-osx/bin/sc /usr/local/bin/sc`
-1. Follow the install directions in `./sc-4.4.9-osx/config_examples/systemd/README.md` to set up the `systemd` service
-1. Follow the install directions in `./sc-4.4.9-osx/config_examples/upstart/README.md` to set up the SauceConnect `upstart` services
 
 
 ## Start SauceConnect
@@ -47,7 +30,7 @@ Note:
 - _username_ is NOT the email address
 - _tunnel-name_ should have no spaces and should be kebab-case
 
-`bin/sc -u username -k 758f7c99-8651-.. -i tunnel-name-in-kebab-case`
+`bin/sc -u username -k abc123abc123-.. -i tunnel-name-in-kebab-case`
 
 
 ## Run the Tests
@@ -73,7 +56,7 @@ Read the instructions on [Cross Browser Testing](cross-browser-testing.md)
    },
     "sauce": {
       "username": "REPLACE_WITH_USERNAME",
-      "accessKey": "758f7c99-8651-...",
+      "accessKey": "abc123abc123...",
       "name": "new-test",
       "tunnelId": "tunnel-name-in-kebab-case",
       "disabled": false,

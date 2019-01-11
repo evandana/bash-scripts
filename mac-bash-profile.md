@@ -13,16 +13,35 @@
 # Java and ThingWorx
 #######################
 
-export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_111.jdk/Contents/Home
+export JAVA_8_HOME=$(/usr/libexec/java_home -v1.8)
+alias java8='export JAVA_HOME=$JAVA_8_HOME'
+
+#default
+export JAVA_HOME=$JAVA_8_HOME
+
 export CATALINA_HOME=/Applications/tomcat
 export JRE_HOME=$JAVA_HOME/jre
 
 
 #######################
-# Proxy
+# NVM (Node Version Manager)
 #######################
 
-export ALL_PROXY=http://SOMEWEBSITE:PORT:80
+export NVM_DIR=~/.nvm
+# This loads nvm dynamically, but takes ~30s
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" 
+echo "For 'npm' to work with dynamic versioning, run 'loadnpm'"
+loadnpm () {
+        source $(brew --prefix nvm)/nvm.sh
+}
+
+source /usr/local/opt/nvm/nvm.sh
+
+
+#######################
+# Proxy
+
+export ALL_PROXY=http://PROXY-SITE:80
 export HTTP_PROXY=$ALL_PROXY
 export HTTPS_PROXY=$ALL_PROXY
 export FTP_PROXY=$ALL_PROXY
@@ -31,9 +50,9 @@ export http_proxy=$ALL_PROXY
 export https_proxy=$ALL_PROXY
 export ftp_proxy=$ALL_PROXY
 export rsync_proxy=$ALL_PROXY
-export NO_PROXY='localhost,.local,127.0.0.1,10.0.2.'
 export no_proxy=$NO_PROXY
 
+export NO_PROXY=localhost,.local,127.0.0.1,10.0.2.
 
 #######################
 # Terminal Enhancemenets
@@ -69,6 +88,7 @@ alias gc="git commit"
 alias gs="git status"
 alias ga="git add"
 
+
 #######################
 # Docker Version Manager
 #######################
@@ -91,3 +111,11 @@ vscode () {
         open -a "Visual Studio Code" --args "$F"
     fi
 }
+
+
+######################
+# certificate resolution
+######################
+export NODE_TLS_REJECT_UNAUTHORIZED=0
+
+```

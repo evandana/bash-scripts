@@ -1,5 +1,7 @@
 # Turning On/Off Proxies from Bash #
 
+These files can be really useful for turning on and off the proxies as you move from the network to outside networks at home, etc.
+
 ### Contents
 
 * [Bash Scripts](#bash-scripts-to-run)
@@ -12,40 +14,67 @@
 `turn-on-proxies.sh`
 
 ```bash
-#!/usr/bin/env bash
-http_proxy="http://SOMEPROXY.COM:80"
-export http_proxy=$http_proxy
-export https_proxy=$http_proxy
-export ftp_proxy=$http_proxy
-export rsync_proxy=$http_proxy
-export HTTP_PROXY=$http_proxy
-export HTTPS_PROXY=$http_proxy
-export FTP_PROXY=$http_proxy
-export RSYNC_PROXY=$http_proxy
-git config --global http.proxy $http_proxy
-git config --global https.proxy $http_proxy
-npm config rm proxy
-npm config set http-proxy $http_proxy
-npm config set https-proxy $http_proxy
-```
 
-### Turn Off Proxies
+# call <script-name> on|off
 
-`turn-off-proxies.sh`
-```bash
-#!/usr/bin/env bash
-unset http_proxy
-unset https_proxy
-unset ftp_proxy
-unset rsync_proxy
-unset HTTP_PROXY
-unset HTTPS_PROXY
-unset FTP_PROXY
-unset RSYNC_PROXY
-git config --global --unset http.proxy
-git config --global --unset https.proxy
-npm config rm proxy
-npm config rm https-proxy
+# Set Proxy
+function on() {
+    proxy="http://proxy-server.com:80"
+    export {http,https,ftp,yarn,socks,yarn_https}_proxy=proxy
+    export {HTTP,HTTPS,FTP}_PROXY=proxy
+    export proxy_url=proxy
+    export yarn_strict_ssl=proxy
+    #printenv
+}
+
+# Unset Proxy
+function off() {
+    unset http_proxy
+    unset https_proxy
+    unset ftp_proxy
+    unset yarn_proxy
+    unset socks_proxy
+    unset yarn_https_proxy
+    unset HTTP_PROXY
+    unset HTTPS_PROXY
+    unset FTP_PROXY
+    unset proxy_url
+    unset yarn_strict_ssl
+    #printenv
+}
+
+
+# Check if the function exists (bash specific)
+if declare -f "$1" > /dev/null
+then
+  # call arguments verbatim
+  "$@"
+else
+  # Show a helpful error
+  echo "'$1' is not a known function name" >&2
+  exit 1
+fi
+
+
+echo "http_proxy: '$http_proxy'"
+
+# unset ALL_PROXY
+# unset FTP_PROXY
+# unset RSYNC_PROXY
+# unset HTTP_PROXY
+# unset HTTPS_PROXY
+# unset http_proxy
+# unset https_proxy
+# unset ftp_proxy
+# unset rsync_proxy
+# unset NO_PROXY
+# npm config delete https-proxy
+# npm config delete http-proxy
+# npm config delete proxy
+
+# . ~/.bashrc
+# source ~/.bashrc
+
 ```
 
 **When you run these, you *must* run them in the current shell environment, and therefore have to preface running these scripts with the `.` command**
