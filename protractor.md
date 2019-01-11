@@ -18,6 +18,8 @@ npm install -g protractor
 node --inspect-brk PATH_TO_NPM_PROTRACTOR PATH_TO_PROTRACTOR_CONFIG_FILE
 ```
 
+Tip: find where your global node_modules are stored with: `npm root -g`
+
 e.g. 
 
 ```bash
