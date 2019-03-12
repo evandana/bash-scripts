@@ -24,18 +24,22 @@ export JRE_HOME=$JAVA_HOME/jre
 
 
 #######################
-# NVM (Node Version Manager)
+# Key Repeat Speed Adjustments
 #######################
 
-export NVM_DIR=~/.nvm
-# This loads nvm dynamically, but takes ~30s
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" 
-echo "For 'npm' to work with dynamic versioning, run 'loadnpm'"
-loadnpm () {
-        source $(brew --prefix nvm)/nvm.sh
-}
+# Note: this enables the speed adjustments in terminal
+#  Terminal key repeat is not possible with the typical settings dialogs
 
-source /usr/local/opt/nvm/nvm.sh
+defaults write -g InitialKeyRepeat -int 10 # normal minimum is 15 (225 ms)
+defaults write -g KeyRepeat -int 1 # normal minimum is 2 (30 ms)
+
+######################
+# NVM
+######################
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 #######################
