@@ -1,6 +1,17 @@
 # Github Code Snippets
 
 
+## SSH
+
+Add the following to `~/.gitconfig`:
+```
+[url "https://"]
+  insteadOf = git://
+```
+
+One liner: `git config --global url."https://".insteadOf git://`
+
+
 ## Local `.gitignore`
 
 Update a local .gitignore file. Edits to this file will not be tracked, and therefore not create additional commits.
